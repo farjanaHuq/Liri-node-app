@@ -1,0 +1,20 @@
+
+                Venue: Planet Hollywood Resort & Casino	- Las Vegas
+                Location: 3667 Las Vegas Boulevard South
+                Location extended: Las Vegas, NV 89109
+                Data/Time: 2019-02-07T05:00:00
+                
+                Title of the movie: La La Land
+                Year the movie came out: 2016
+                IMDB Rating: 8.0
+                Rotten Tomatoes Rating: 91%
+                Country where the movie was produced: USA, Hong Kong
+                Language of the movie: English
+                Plot of the movie: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+                Actors in the movie: Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters 
+            
+        Artist: George Ezra
+        Song's Name: Budapest
+        Preview Url: https://p.scdn.co/mp3-preview/5342882884df422c954a1b12dc77750267d2e2bc?cid=dd202a01618b42819da6c069eb9f954f
+        Album Name: Wanted on Voyage
+        
