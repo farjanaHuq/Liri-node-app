@@ -5,29 +5,32 @@ var Spotify = require('node-spotify-api');
 var Omdb = require('omdb-client');
 var fs = require('fs');
 
-console.log("It's LIRI");
-
-
+// variable to take arguments from user
 var userLog = process.argv[2];
 var request = process.argv.slice(3).join('-');
 
+//seatGeek key and url
 var seatGeek = keys.seatGeek;
 var seatGeekURL = `https://api.seatgeek.com/2/events?performers.slug=${request}&client_id=${seatGeek.id}`;
 
+//instantiate a spotify object
 var spotify = new Spotify({
     id: keys.spotify.id,
     secret: keys.spotify.secret
 });
 
+//takes user choice and displays the info
 if (userLog === 'do-what-it-says') {
+    //read the random.txt file to identify the user request
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) return console.log(err);
         // console.log(data);
+        //puts the strings from random.txt file to an array
         var dataArr = data.split(',');
         dataArr[0] = dataArr[0].trim();
         dataArr[1] = dataArr[1].trim();
         if (dataArr[1].indexOf('"') === 0) dataArr[1] = dataArr[1].slice(1, -1);
-
+        //saves the user choice and request in variables 'userLog' and 'request' respectively
         userLog = dataArr[0];
         request = dataArr[1];
         doWhatItSays();
@@ -39,8 +42,10 @@ else {
 }
 
 
-//==================CallBack Functions===========================
+//=================================CallBack Functions=================================================
+//function takes the user choice n request for concert/song/movie and displays the corresponding infos
 function doWhatItSays() {
+    //user choice is 'concert-this' and request is the band name
     if (userLog === 'concert-this') {
 
         axios.get(seatGeekURL)
@@ -59,7 +64,7 @@ function doWhatItSays() {
                 console.error(err);
             })
     }
-
+    //user choice is 'spotify-this-song' and request is a song title
     else if (userLog === 'spotify-this-song') {
         spotify.search({ type: 'track', query: request }, function (err, data) {
 
@@ -82,6 +87,7 @@ function doWhatItSays() {
             }
         });
     }
+    //user choice is 'movie-this' and request is a movie title
     else if (userLog === 'movie-this') {
         if (process.argv.length > 3) {
             omdbRequest(request);
@@ -133,7 +139,7 @@ function spotifyRequest(response) {
 
     logTxt(spotifyRequest);
 }
-
+//append the info from user request to the log.txt file
 function logTxt(info){
     fs.appendFile("./log.txt", info, function (err) {
         // If an error was experienced we will log it.
