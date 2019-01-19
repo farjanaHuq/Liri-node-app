@@ -13,6 +13,7 @@ var request = process.argv.slice(3).join('-');
 var seatGeek = keys.seatGeek;
 var seatGeekURL = `https://api.seatgeek.com/2/events?performers.slug=${request}&client_id=${seatGeek.id}`;
 
+var divider = "\n=========================================================\n";
 //instantiate a spotify object
 var spotify = new Spotify({
     id: keys.spotify.id,
@@ -49,15 +50,19 @@ function doWhatItSays() {
     if (userLog === 'concert-this') {
 
         axios.get(seatGeekURL)
-
+           
             .then(function (resp) {
-            var seatGeekRequest = `
-                Venue: ${resp.data.events[0].venue.name}
-                Location: ${resp.data.events[0].venue.address}
-                Location extended: ${resp.data.events[0].venue.extended_address}
-                Data/Time: ${resp.data.events[0].datetime_utc}
-                `
+            var seatGeekRequest = [
+                `Title: ${resp.data.events[0].short_title}`,
+                `Venue: ${resp.data.events[0].venue.name}`,
+                `Location: ${resp.data.events[0].venue.address}`,
+                 `Location extended: ${resp.data.events[0].venue.extended_address}`,
+                `Data/Time: ${resp.data.events[0].datetime_utc}`,
+                 divider
+                ].join("\n");
+                console.log("\n");
                 console.log(seatGeekRequest);
+                
                 logTxt(seatGeekRequest);
             })
             .catch(function (err) {
@@ -72,7 +77,7 @@ function doWhatItSays() {
                 return console.log('Error occurred: ' + err);
             }
             else if (data.tracks.items.length >= 1) {
-
+                console.log("\n");
                 spotifyRequest(data.tracks.items[0]);
             }
             else {
@@ -80,6 +85,7 @@ function doWhatItSays() {
                     if (err) {
                         return console.log('Error occurred: ' + err);
                     } else {
+                        console.log("\n");
                         console.log('Song not found. Try this song instead.');
                         spotifyRequest(data.tracks.items[0]);
                     }
@@ -90,9 +96,12 @@ function doWhatItSays() {
     //user choice is 'movie-this' and request is a movie title
     else if (userLog === 'movie-this') {
         if (process.argv.length > 3) {
+            console.log("\n");
             omdbRequest(request);
         }
         else {
+            console.log("\n");
+            console.log("User forgot to type the movie name.");
             omdbRequest('Mr. Nobody');
         }
     }
@@ -110,16 +119,18 @@ function omdbRequest(request) {
             return console.log("Error occured");
         }
         else {
-        var omdbRequest = `
-            Title of the movie: ${data.Title}
-            Year the movie came out: ${data.Year}
-            IMDB Rating: ${data.imdbRating}
-            Rotten Tomatoes Rating: ${data.Ratings[1].Value}
-            Country where the movie was produced: ${data.Country}
-            Language of the movie: ${data.Language}
-            Plot of the movie: ${data.Plot}
-            Actors in the movie: ${data.Actors} `
-
+        var omdbRequest = [
+            `Title of the movie: ${data.Title}`,
+            `Year the movie came out: ${data.Year}`,
+            `IMDB Rating: ${data.imdbRating}`,
+            `Rotten Tomatoes Rating: ${data.Ratings[1].Value}`,
+            `Country where the movie was produced: ${data.Country}`,
+            `Language of the movie: ${data.Language}`,
+            `Plot of the movie: ${data.Plot}`,
+           ` Actors in the movie: ${data.Actors} `,
+           divider
+        ].join("\n");
+            console.log("\n");
             console.log(omdbRequest);
             logTxt(omdbRequest);
 
@@ -129,12 +140,13 @@ function omdbRequest(request) {
 
 //print the spotify request
 function spotifyRequest(response) {
-    var spotifyRequest = `
-        Artist: ${response.artists[0].name}
-        Song's Name: ${response.name}
-        Preview Url: ${response.preview_url}
-        Album Name: ${response.album.name}
-        `
+    var spotifyRequest = [
+        `Artist: ${response.artists[0].name}`,
+        `Song's Name: ${response.name}`,
+        `Preview Url: ${response.preview_url}`,
+        `Album Name: ${response.album.name}`,
+         divider
+        ].join( "\n");
     console.log(spotifyRequest);
 
     logTxt(spotifyRequest);

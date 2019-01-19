@@ -1,20 +1,53 @@
 
-                Venue: Planet Hollywood Resort & Casino	- Las Vegas
-                Location: 3667 Las Vegas Boulevard South
-                Location extended: Las Vegas, NV 89109
-                Data/Time: 2019-02-07T05:00:00
-                
-                Title of the movie: La La Land
-                Year the movie came out: 2016
-                IMDB Rating: 8.0
-                Rotten Tomatoes Rating: 91%
-                Country where the movie was produced: USA, Hong Kong
-                Language of the movie: English
-                Plot of the movie: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
-                Actors in the movie: Ryan Gosling, Emma Stone, Amiée Conn, Terry Walters 
-            
-        Artist: George Ezra
-        Song's Name: Budapest
-        Preview Url: https://p.scdn.co/mp3-preview/5342882884df422c954a1b12dc77750267d2e2bc?cid=dd202a01618b42819da6c069eb9f954f
-        Album Name: Wanted on Voyage
-        
+Title: Foreigner
+Venue: Hard Rock Casino Vancouver
+Location: 2080 United Blvd
+Location extended: Coquitlam, Canada
+Data/Time: 2019-02-23T04:00:00
+
+=========================================================
+Title: Foreigner
+Venue: Hard Rock Casino Vancouver
+Location: 2080 United Blvd
+Location extended: Coquitlam, Canada
+Data/Time: 2019-02-23T04:00:00
+
+=========================================================
+Artist: George Ezra
+Song's Name: Budapest
+Preview Url: https://p.scdn.co/mp3-preview/5342882884df422c954a1b12dc77750267d2e2bc?cid=dd202a01618b42819da6c069eb9f954f
+Album Name: Wanted on Voyage
+
+=========================================================
+Title of the movie: Forrest Gump
+Year the movie came out: 1994
+IMDB Rating: 8.8
+Rotten Tomatoes Rating: 73%
+Country where the movie was produced: USA
+Language of the movie: English
+Plot of the movie: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.
+ Actors in the movie: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys 
+
+=========================================================
+Title of the movie: Mr. Nobody
+Year the movie came out: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 67%
+Country where the movie was produced: Belgium, Germany, Canada, France, USA, UK
+Language of the movie: English, Mohawk
+Plot of the movie: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+ Actors in the movie: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham 
+
+=========================================================
+Artist: Ace of Base
+Song's Name: The Sign
+Preview Url: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=dd202a01618b42819da6c069eb9f954f
+Album Name: The Sign (US Album) [Remastered]
+
+=========================================================
+Artist: Backstreet Boys
+Song's Name: I Want It That Way
+Preview Url: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=dd202a01618b42819da6c069eb9f954f
+Album Name: The Hits--Chapter One
+
+=========================================================
