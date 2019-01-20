@@ -39,3 +39,4 @@ Examples:
 ![ResultImages](./resultImages/spotify-this-song.png)
 ![ResultImages](./resultImages/user-forgot-movie-name.png)
 ![ResultImages](./resultImages/do-what-it-says.png)
+![ResultImages](./resultImages/logFile.png)
