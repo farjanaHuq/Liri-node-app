@@ -32,3 +32,10 @@ With this app user will write following commands - 1, 2, 3, 4
     It runs `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`
 
 Finally, it appneds all the command that runs to the log.txt file.
+
+Examples:
+![ResultImages](./resultImages/concert-this.png)
+![ResultImages](./resultImages/movie-this.png)
+![ResultImages](./resultImages/spotify-this-song.png)
+![ResultImages](./resultImages/user-forgot-movie-name.png)
+![ResultImages](./resultImages/do-what-it-says.png)
